@@ -1,0 +1,41 @@
+[ui]
+username=Evangilo <evangilo@gmail.com>
+ignore=~/.hgignore_global
+
+[alias]
+rm = !$HG forget
+ 
+[extensions]
+hgext.churn=
+hgext.pager=
+hgk=
+convert=
+extdiff=
+patchbomb=
+fetch=
+color=
+rebase=
+mq=
+shelve=
+transplant=
+record=
+ 
+[diff]
+git=True
+ 
+[extdiff]
+cmd.opendiff = opendiff
+cmd.sbsdiff = diff
+opts.sbsdiff = -N -b --side-by-side --width=90
+ 
+cmd.sourcetreediff=opendiff
+opts.sourcetreediff=
+
+[pager]
+pager = LESS='FRSX' less
+quiet = True
+attend = log
+ 
+[merge-tools]
+filemerge.executable = opendiff
+filemerge.args = $local $other -ancestor $base -merge $output

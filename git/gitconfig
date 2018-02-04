@@ -1,0 +1,14 @@
+[color]
+    ui = true
+
+[user]
+    name = Evangilo Morais
+    email = evangilo@gmail.com
+
+[alias]
+    ci = commit
+    cam = commit -am
+    co = checkout
+    df = diff --word-diff
+    lg = log --graph --decorate --pretty=oneline --abbrev-commit
+    st = status

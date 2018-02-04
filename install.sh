@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -n "$DOTFILES" ]; then
+if [ -z "$DOTFILES" ]; then
   DOTFILES=~/.dotfiles
 fi
 

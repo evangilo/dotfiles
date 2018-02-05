@@ -1,1 +1,22 @@
+syntax: glob
+
+# Back-up
+*~
+
+# Executables
+*.o
+
+# Python
+*.egg-info
+*.py[co]
+__pycache__
+develop-eggs
+eggs
+
+# JS
 node_modules
+dist
+build
+
+syntax: regexp
+

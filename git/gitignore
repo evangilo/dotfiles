@@ -1,0 +1,18 @@
+# Back-up
+*~
+
+# Executables
+*.o
+
+# Python
+*.egg-info
+*.pyo
+*.pyc
+__pycache__
+develop-eggs
+eggs
+
+# JS
+node_modules
+dist
+build

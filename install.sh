@@ -26,6 +26,9 @@ link "hg/hgrc" ".hgrc"
 link "hg/hgignore_global" ".hgignore_global"
 link "vim/vimrc" ".vimrc"
 link "emacs/emacs" ".emacs"
+link "zsh/zshrc" ".zshrc"
+link "zsh/aliases" ".aliases"
+link "zsh/profile" ".profile"
 
 printf "Done!\n"
 

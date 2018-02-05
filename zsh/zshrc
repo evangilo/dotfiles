@@ -1,0 +1,34 @@
+export ZSH=~/.oh-my-zsh
+export UPDATE_ZSH_DAYS=15
+export LANG=en_US.UTF-8
+export EDITOR='vim'
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+ZSH_THEME="robbyrussell"
+ENABLE_CORRECTION="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+plugins=(fabric git mercurial)
+
+source $ZSH/oh-my-zsh.sh
+
+ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
+ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
+PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
+eval "$(direnv hook zsh)"
+
+if [ -e ".aliases" ]; then
+ source .aliases
+fi 
+
+if [ -e ".profile" ]; then
+  source .profile
+fi
+
+if [ -e ".private_profile" ]; then
+  source .private_profile
+fi 
+

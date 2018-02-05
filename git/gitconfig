@@ -1,6 +1,9 @@
 [color]
     ui = true
 
+[core]
+    excludesfile = ~/.gitignore
+
 [user]
     name = Evangilo Morais
     email = evangilo@evolux.net.br

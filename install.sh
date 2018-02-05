@@ -23,7 +23,7 @@ function link {
 link "git/gitconfig" ".gitconfig"
 link "git/gitignore" ".gitignore"
 link "hg/hgrc" ".hgrc"
-link "hg/hgignore_global" ".hgignore_global"
+link "hg/hgignore" ".hgignore"
 link "vim/vimrc" ".vimrc"
 link "emacs/emacs" ".emacs"
 link "zsh/zshrc" ".zshrc"

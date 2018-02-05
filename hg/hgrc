@@ -1,6 +1,6 @@
 [ui]
 username=Evangilo <evangilo@evolux.net.br>
-ignore=~/.hgignore_global
+ignore=~/.hgignore
 
 [alias]
 rm = !$HG forget

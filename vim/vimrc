@@ -5,12 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kien/ctrlp.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'posva/vim-vue'
 
 call vundle#end()
 

@@ -21,6 +21,13 @@ set cursorline
 set nocursorcolumn
 set nocursorline
 set laststatus=2
+set encoding=utf-8
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set foldmethod=indent
+set foldlevel=99
+
 syntax on
 syntax sync minlines=256
 
@@ -39,11 +46,13 @@ autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 
-let g:javascript_plugin_jsdoc = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_backbone = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_prelude = 0
-autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 0
-
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
+

@@ -22,7 +22,7 @@ eval "$(direnv hook zsh)"
 
 if [ -e ".aliases" ]; then
  source .aliases
-fi 
+fi
 
 if [ -e ".profile" ]; then
   source .profile
@@ -30,5 +30,5 @@ fi
 
 if [ -e ".private_profile" ]; then
   source .private_profile
-fi 
+fi
 

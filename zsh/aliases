@@ -2,3 +2,9 @@ alias rmpyc='find . -type f -name *.pyc -delete'
 alias rmorig='find . -type f -name *.orig -delete'
 alias emacsd="emacs -daemon && emacsclient -c -n"
 alias sssh='ssh -lroot -p2222'
+
+if [[ "$OSTYPE" != "darwin*" ]]; then
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
+fi
+

@@ -19,15 +19,15 @@ function pull_repo {
 }
 
 function create_links {
-  ln -srf git/gitconfig ~/.gitconfig
-  ln -srf git/gitignore ~/.gitignore
-  ln -srf hg/hgrc ~/.hgrc
-  ln -srf hg/hgignore ~/.hgignore
-  ln -srf vim/vimrc ~/.vimrc
-  ln -srf emacs/emacs ~/.emacs
-  ln -srf zsh/zshrc ~/.zshrc
-  ln -srf zsh/aliases ~/.aliases
-  ln -srf zsh/profile ~/.profile
+  ln -sf $DOTFILES/git/gitconfig ~/.gitconfig
+  ln -sf $DOTFILES/git/gitignore ~/.gitignore
+  ln -sf $DOTFILES/hg/hgrc ~/.hgrc
+  ln -sf $DOTFILES/hg/hgignore ~/.hgignore
+  ln -sf $DOTFILES/vim/vimrc ~/.vimrc
+  ln -sf $DOTFILES/emacs/emacs ~/.emacs
+  ln -sf $DOTFILES/zsh/zshrc ~/.zshrc
+  ln -sf $DOTFILES/zsh/aliases ~/.aliases
+  ln -sf $DOTFILES/zsh/profile ~/.profile
 }
 
 function installer {

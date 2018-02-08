@@ -30,5 +30,7 @@ link "zsh/zshrc" ".zshrc"
 link "zsh/aliases" ".aliases"
 link "zsh/profile" ".profile"
 
+source install_deps.sh
+
 printf "Done!\n"
 

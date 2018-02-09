@@ -29,7 +29,7 @@ function installer {
 function setup_vim {
   installer vim
   clone_or_rebase https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  vim +PluginInstall +qall
+  vim +PluginInstall +qall < /dev/tty
 }
 
 function setup_emacs {

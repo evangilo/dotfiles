@@ -5,12 +5,12 @@ You can install or update the dotfiles via the command-line with either curl or 
 ### curl
 
 ```sh
-curl -o- https://raw.githubusercontent.com/evangilo/dotfiles/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/evangilo/dotfiles/master/setup.sh | bash
 ```
 
 ### wget
 
 ```sh
-wget -qO- https://raw.githubusercontent.com/evangilo/dotfiles/master/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/evangilo/dotfiles/master/setup.sh | bash
 ```
 

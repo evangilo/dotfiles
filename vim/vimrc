@@ -30,7 +30,7 @@ syntax on
 syntax sync minlines=256
 
 filetype plugin indent on
-autocmd Filetype sh setlocal sts=4 sw=4 expandtab
+autocmd Filetype sh setlocal sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal sts=2 sw=2 expandtab
 autocmd Filetype css setlocal sts=2 sw=2 expandtab
 autocmd Filetype sql setlocal sts=2 sw=2 expandtab

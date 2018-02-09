@@ -49,6 +49,11 @@ function setup_tools {
   installer mercurial ncdu xsel
 }
 
+function setup_fonts {
+  clone_or_rebase https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
+  sh /tmp/install.sh
+}
+
 function create_links {
   ln -sf $DOTFILES/git/gitconfig ~/.gitconfig
   ln -sf $DOTFILES/git/gitignore ~/.gitignore
@@ -67,6 +72,7 @@ setup_emacs
 setup_zsh
 setup_pyenv
 setup_tools
+setup_fonts
 create_links
 
 printf "Done!\n"

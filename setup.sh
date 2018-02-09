@@ -18,9 +18,9 @@ function pull_repo {
 
 function installer {
   if which pacman &> /dev/null; then
-    sudo pacman -S $@
+    sudo pacman -S $@ --noconfirm
   elif which apt-get &> /dev/null; then
-    sudo apt-get install $@
+    sudo apt-get install $@ --yes
   elif which brew &> /dev/null; then
     brew install $@
   fi

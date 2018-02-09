@@ -1,5 +1,5 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -8,6 +8,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'zenorocha/dracula-theme'
 
 call vundle#end()
 
@@ -43,14 +45,6 @@ autocmd Filetype cpp setlocal sts=4 sw=4 expandtab
 autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-
-inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<cr>"
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:airline_powerline_fonts = 1

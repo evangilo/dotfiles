@@ -50,8 +50,8 @@ function setup_tools {
 }
 
 function setup_fonts {
-  clone_or_rebase https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
-  sh /tmp/install.sh
+  clone_or_rebase https://github.com/powerline/fonts.git /tmp/fonts
+  sh /tmp/fonts/install.sh
 }
 
 function create_links {

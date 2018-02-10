@@ -1,7 +1,7 @@
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-if [ -s "/usr/bin/virtualenvwrapper_lazy" ]; then
+if [ -s "/usr/bin/virtualenvwrapper_lazy.sh" ]; then
   source /usr/bin/virtualenvwrapper_lazy.sh
 else
   source /usr/local/bin/virtualenvwrapper_lazy.sh

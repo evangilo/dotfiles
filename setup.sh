@@ -55,7 +55,6 @@ function setup_emacs {
 function setup_zsh {
   println "Setup zsh..."
   installer zsh
-  sudo chsh -s /bin/zsh
   clone_or_rebase https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 }
 

@@ -70,7 +70,7 @@ function setup_tools {
 
 function setup_fonts {
   println "Setup fonts..."
-  if [[ "$OSTYPE" == "darwin*" ]]; then
+  if [[ "$OSTYPE" == "darwin"* ]]; then
     cp $DOTFILES/fonts/Roboto_Mono_for_Powerline.ttf /Library/Fonts
   else
     cp $DOTFILES/fonts/Monaco_Linux_Powerline.ttf $HOME/.local/share/fonts

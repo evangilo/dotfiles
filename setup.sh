@@ -92,13 +92,13 @@ function create_links {
 }
 
 pull_repo
+create_links
 setup_vim
 setup_emacs
 setup_zsh
 setup_pyenv
 setup_tools
 setup_fonts
-create_links
 
 println "Done!\n"
 

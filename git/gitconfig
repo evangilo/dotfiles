@@ -15,3 +15,7 @@
     df = diff --word-diff
     lg = log --graph --decorate --pretty=oneline --abbrev-commit
     st = status
+
+[branch]
+    autosetuprebase = always
+

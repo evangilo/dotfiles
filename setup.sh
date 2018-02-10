@@ -13,7 +13,6 @@ function println {
 
 function clone_or_rebase {
   if [ -d "$2" ]; then
-    git config --global branch.autosetuprebase always
     git --work-tree=$2 --git-dir=$2/.git pull origin master
   else
     git clone $1 $2

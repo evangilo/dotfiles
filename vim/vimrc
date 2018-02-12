@@ -10,6 +10,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'zenorocha/dracula-theme'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8'
 
 call vundle#end()
 

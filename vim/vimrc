@@ -48,6 +48,10 @@ autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'node_modules\|DS_Store\|git',
+  \ 'file': '\v\.(pyc|lock|orig|npm)$'
+  \ }
+
 let g:airline_powerline_fonts = 1
 

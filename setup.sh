@@ -55,7 +55,8 @@ function setup_emacs {
 function setup_zsh {
   println "Setup zsh..."
   installer zsh
-  clone_or_rebase https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  clone_or_rebase https://github.com/robbyrussell/oh-my-zsh.git ~/.zsh/oh-my-zsh
+  clone_or_rebase https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 }
 
 function setup_pyenv {

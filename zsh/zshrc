@@ -1,4 +1,5 @@
-export ZSH=~/.oh-my-zsh
+export ZSH_PLUGINS=~/.zsh
+export ZSH=$ZSH_PLUGINS/oh-my-zsh
 export UPDATE_ZSH_DAYS=15
 export LANG=en_US.UTF-8
 export EDITOR='vim'
@@ -10,7 +11,8 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(fabric git mercurial)
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
+source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
 ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"

@@ -48,10 +48,15 @@ autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 
+" Custom key bindings
+nnoremap <C-W>M <C-W>\| <C-W>_  " maximize buffer
+nnoremap <C-W>m <C-W>=  " minimize buffer
+
 let g:ctrlp_custom_ignore = {
   \ 'dir': 'node_modules\|DS_Store\|git',
   \ 'file': '\v\.(pyc|lock|orig|npm)$'
   \ }
 
 let g:airline_powerline_fonts = 1
+let g:airline_exclude_preview=1
 

@@ -64,6 +64,11 @@ function setup_pyenv {
   sudo easy_install virtualenvwrapper
 }
 
+function setup_tmux {
+  println "Setup tmux..."
+  installer tmux
+}
+
 function setup_tools {
   println "Setup extra tools..."
   installer mercurial ncdu xsel
@@ -90,6 +95,7 @@ function create_links {
   ln -sf $DOTFILES/zsh/zshrc ~/.zshrc
   ln -sf $DOTFILES/zsh/aliases ~/.aliases
   ln -sf $DOTFILES/zsh/profile ~/.profile
+  ln -sf $DOTFILES/tmux/tmux.conf ~/.tmux.conf
 }
 
 pull_repo
@@ -98,6 +104,7 @@ setup_vim
 setup_emacs
 setup_zsh
 setup_pyenv
+setup_tmux
 setup_tools
 setup_fonts
 

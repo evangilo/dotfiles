@@ -79,8 +79,8 @@ function setup_fonts {
   if [[ "$OSTYPE" == "darwin"* ]]; then
     cp $DOTFILES/fonts/Roboto_Mono_for_Powerline.ttf /Library/Fonts
   else
-    cp $DOTFILES/fonts/Monaco_Linux_Powerline.ttf $HOME/.local/share/fonts
-    fc-cache -f $HOME/.local/share/fonts
+    clone_or_rebase https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
+    sh /tmp/fonts/install.sh # my font name: Ubuntu Mono derivative Powerline
   fi
 }
 

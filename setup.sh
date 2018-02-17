@@ -80,7 +80,7 @@ function setup_fonts {
     cp $DOTFILES/fonts/Roboto_Mono_for_Powerline.ttf /Library/Fonts
   else
     clone_or_rebase https://github.com/powerline/fonts.git --depth=1 /tmp/fonts
-    sh /tmp/fonts/install.sh # my font name: Ubuntu Mono derivative Powerline
+    sh /tmp/fonts/install.sh # Ubuntu Mono derivative Powerline
   fi
 }
 

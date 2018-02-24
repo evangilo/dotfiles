@@ -64,6 +64,13 @@ function setup_pyenv {
   sudo easy_install virtualenvwrapper
 }
 
+function setup_nvm {
+  println "Setup nvm..."
+  clone_or_rebase https://github.com/creationix/nvm.git ~/.nvm
+  source ~/.nvm/nvm.sh
+  nvm install 8.0.0
+}
+
 function setup_tmux {
   println "Setup tmux..."
   installer tmux
@@ -103,6 +110,7 @@ create_links
 setup_vim
 setup_emacs
 setup_zsh
+setup_nvm
 setup_pyenv
 setup_tmux
 setup_tools

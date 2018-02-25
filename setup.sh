@@ -61,7 +61,7 @@ function setup_zsh {
 
 function setup_pyenv {
   println "Setup pyvenv..."
-  sudo easy_install virtualenvwrapper
+  sudo easy_install virtualenv virtualenvwrapper
 }
 
 function setup_nvm {

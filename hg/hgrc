@@ -4,6 +4,7 @@ ignore=~/.hgignore
 
 [alias]
 rm = !$HG forget
+lg = !$HG log -b .
  
 [extensions]
 hgext.churn=

@@ -19,3 +19,5 @@
 [branch]
     autosetuprebase = always
 
+[push]
+    default = upstream

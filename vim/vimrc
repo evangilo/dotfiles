@@ -23,12 +23,11 @@ set nocursorcolumn
 set nocursorline
 set laststatus=2
 set encoding=utf-8
-set shiftwidth=2
-set softtabstop=2
 set tabstop=2
 set foldmethod=indent
 set foldlevel=99
 set backspace=indent,eol,start
+set tabstop=2 shiftwidth=2 expandtab
 
 syntax on
 syntax sync minlines=256
@@ -47,6 +46,7 @@ autocmd Filetype cpp setlocal sts=4 sw=4 expandtab
 autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
+autocmd Filetype yml setlocal sts=2 sw=2 expandtab
 
 " Custom key bindings
 nnoremap <C-W>M <C-W>\| <C-W>_  " maximize buffer

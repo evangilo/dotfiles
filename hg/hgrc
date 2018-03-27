@@ -4,9 +4,9 @@ ignore=~/.hgignore
 
 [alias]
 lg = !$HG log -b .
-dummycommit = !touch foo; $HG add foo; $HG commit -m "$1"; $HG rm foo; $HG commit --amend -m "$1"
+dummycommit = !touch foo; $HG add foo; $HG commit -m "dummy commit"; $HG rm foo; $HG commit --amend -m "dummy commit"
 dci = dummycommit
- 
+
 [extensions]
 hgext.churn=
 hgext.pager=
@@ -21,15 +21,15 @@ mq=
 shelve=
 transplant=
 record=
- 
+
 [diff]
 git=True
- 
+
 [extdiff]
 cmd.opendiff = opendiff
 cmd.sbsdiff = diff
 opts.sbsdiff = -N -b --side-by-side --width=90
- 
+
 cmd.sourcetreediff=opendiff
 opts.sourcetreediff=
 
@@ -37,7 +37,7 @@ opts.sourcetreediff=
 pager = LESS='FRSX' less
 quiet = True
 attend = log
- 
+
 [merge-tools]
 filemerge.executable = opendiff
 filemerge.args = $local $other -ancestor $base -merge $output

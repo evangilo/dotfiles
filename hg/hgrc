@@ -1,10 +1,11 @@
 [ui]
-username=Evangilo <evangilo@evolux.net.br>
+username=Evangilo <evangilo@gmail.com>
 ignore=~/.hgignore
 
 [alias]
-rm = !$HG forget
 lg = !$HG log -b .
+dummycommit = !touch foo; $HG add foo; $HG commit -m "$1"; $HG rm foo; $HG commit --amend -m "$1"
+dci = dummycommit
  
 [extensions]
 hgext.churn=

@@ -43,7 +43,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (groovy-mode jenkins yaml-mode dockerfile-mode jsx-mode paredit rainbow-delimiters rainbow-mode lua-mode flymake-css flymake-elixir flymake-python-pyflakes git-gutter+ elixir-mode whitespace-cleanup-mode neotree tree-mode js2-refactor js2-mode vue-mode dracula-theme helm-projectile projectile which-key use-package)))
+    (diff-hl groovy-mode jenkins yaml-mode dockerfile-mode jsx-mode paredit rainbow-delimiters rainbow-mode lua-mode flymake-css flymake-elixir flymake-python-pyflakes git-gutter+ elixir-mode whitespace-cleanup-mode neotree tree-mode js2-refactor js2-mode vue-mode dracula-theme helm-projectile projectile which-key use-package)))
  '(tab-width 2)
  '(tool-bar-mode nil))
 
@@ -63,6 +63,9 @@
 ; (use-package flymake-jshint)
 (use-package js2-mode)
 (use-package js2-refactor)
+(use-package diff-hl
+  :ensure t
+  :config (global-diff-hl-mode))
 
 (defun evo/js-base-mode ()
   (js2-refactor-mode)

@@ -1,5 +1,7 @@
 alias rmpyc='find . -type f -name *.pyc -delete'
 alias rmorig='find . -type f -name *.orig -delete'
+alias rmdiff='find . -type f -name *.diff -delete'
+alias rmpatch='find . -type f -name *.patch -delete'
 alias emacsd="emacs -daemon && emacsclient -c -n"
 alias sssh='ssh -lroot -p2222'
 

@@ -12,6 +12,9 @@ Plugin 'mhinz/vim-signify'
 Plugin 'zenorocha/dracula-theme'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'bronson/vim-trailing-whitespace'
 
 call vundle#end()
 

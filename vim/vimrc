@@ -14,7 +14,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
-Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()
 
@@ -63,3 +63,5 @@ let g:ctrlp_custom_ignore = {
 let g:airline_powerline_fonts = 1
 let g:airline_exclude_preview=1
 
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1

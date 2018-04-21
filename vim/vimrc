@@ -15,6 +15,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'docunext/closetag.vim'
 
 call vundle#end()
 
@@ -65,3 +66,5 @@ let g:airline_exclude_preview=1
 
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+
+let g:closetag_html_style=1

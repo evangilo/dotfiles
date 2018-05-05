@@ -24,8 +24,8 @@ if [ -e ".aliases" ]; then
  source .aliases
 fi
 
-if [ -e ".profile" ]; then
-  source .profile
+if [ -e ".zsh_profile" ]; then
+  source .zsh_profile
 fi
 
 if [ -e ".private_profile" ]; then

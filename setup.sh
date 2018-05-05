@@ -102,7 +102,7 @@ function create_links {
   ln -sf $DOTFILES/emacs/emacs ~/.emacs
   ln -sf $DOTFILES/zsh/zshrc ~/.zshrc
   ln -sf $DOTFILES/zsh/aliases ~/.aliases
-  ln -sf $DOTFILES/zsh/profile ~/.profile
+  ln -sf $DOTFILES/zsh/zsh_profile ~/.zsh_profile
   ln -sf $DOTFILES/tmux/tmux.conf ~/.tmux.conf
 }
 

@@ -108,7 +108,7 @@ function create_links {
 }
 
 pull_repo
-#create_links
+create_links
 setup_vim
 setup_emacs
 setup_zsh

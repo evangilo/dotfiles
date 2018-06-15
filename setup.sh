@@ -42,7 +42,7 @@ function installer {
 
 function setup_vim {
   println "Setup vim..."
-  installer vim
+  source $DOTFILES/vim/install.sh
   clone_or_rebase https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall < /dev/tty
 }
@@ -83,12 +83,13 @@ function setup_tools {
 }
 
 function setup_fonts {
+  fonts_dir=$(mktemp -d)
   println "Setup fonts..."
   if [[ "$OSTYPE" == "darwin"* ]]; then
     cp $DOTFILES/fonts/Roboto_Mono_for_Powerline.ttf /Library/Fonts
   else
-    clone_or_rebase "https://github.com/powerline/fonts.git --depth=1" /tmp/fonts
-    sh /tmp/fonts/install.sh # Ubuntu Mono derivative Powerline
+    clone_or_rebase "https://github.com/powerline/fonts.git --depth=1" $fonts_dir
+    sh $fonts_dir/install.sh # Ubuntu Mono derivative Powerline
   fi
 }
 
@@ -107,7 +108,7 @@ function create_links {
 }
 
 pull_repo
-create_links
+#create_links
 setup_vim
 setup_emacs
 setup_zsh

@@ -25,7 +25,7 @@ cd ..
 	--with-features=huge \
 	--enable-fontset \
 	--enable-largefile \
-	--with-compiledby="evangilo" \
+	--with-compiledby="$USER" \
 	--enable-fail-if-missing
 
 make

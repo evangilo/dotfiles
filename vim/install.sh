@@ -1,6 +1,9 @@
 #!/bin/bash
 
+# https://gist.github.com/odiumediae/3b22d09b62e9acb7788baf6fdbb77cf8
+
 echo "Install github.com/vim/vim"
+
 
 vim_source=$(mktemp -d)
 git clone https://github.com/vim/vim $vim_source

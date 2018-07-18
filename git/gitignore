@@ -16,3 +16,5 @@ eggs
 node_modules
 dist
 build
+
+.envrc

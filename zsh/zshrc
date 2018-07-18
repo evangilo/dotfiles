@@ -10,6 +10,8 @@ ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(fabric git mercurial)
+eval "$(direnv hook zsh)"
+eval "$(pyenv virtualenv-init -)"
 
 source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
 source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -35,3 +37,9 @@ fi
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi
+
+export GOPATH=~/.golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+

@@ -21,3 +21,5 @@
 
 [push]
     default = upstream
+[diff]
+	tool = opendiff

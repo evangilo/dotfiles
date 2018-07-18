@@ -45,7 +45,7 @@ autocmd Filetype lua setlocal sts=2 sw=2 expandtab
 autocmd Filetype scss setlocal sts=2 sw=2 expandtab
 autocmd Filetype html setlocal sts=2 sw=2 expandtab
 autocmd Filetype python setlocal sts=4 sw=4 expandtab
-autocmd Filetype c setlocal sts=4 sw=4 expandtab
+autocmd Filetype c setlocal  softtabstop=4 shiftwidth=4 tabstop=4 noet
 autocmd Filetype cpp setlocal sts=4 sw=4 expandtab
 autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab

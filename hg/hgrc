@@ -38,7 +38,7 @@ quiet = True
 attend = log
 
 [merge-tools]
-filemerge.executable = opendiff-w
+filemerge.executable = opendiff
 # opendiff returns immediately, without waiting for FileMerge to exit.
 # Piping the output makes opendiff wait for FileMerge.
 filemerge.args = $local $other -ancestor $base -merge $output | cat

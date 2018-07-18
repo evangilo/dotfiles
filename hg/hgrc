@@ -4,7 +4,7 @@ ignore=~/.hgignore
 
 [alias]
 lg = !$HG log -b .
-dummycommit = !touch foo; $HG add foo; $HG commit -m "dummy commit"; $HG rm foo; $HG commit --amend -m "dummy commit"
+dummycommit = !touch foo; $HG add foo; $HG commit -m "$1"; $HG rm foo; $HG commit --amend -m "dummy commit"
 dci = dummycommit
 
 [extensions]
@@ -32,12 +32,13 @@ opts.sbsdiff = -N -b --side-by-side --width=90
 
 cmd.sourcetreediff=opendiff
 opts.sourcetreediff=
-
 [pager]
 pager = LESS='FRSX' less
 quiet = True
 attend = log
 
 [merge-tools]
-filemerge.executable = opendiff
-filemerge.args = $local $other -ancestor $base -merge $output
+filemerge.executable = opendiff-w
+# opendiff returns immediately, without waiting for FileMerge to exit.
+# Piping the output makes opendiff wait for FileMerge.
+filemerge.args = $local $other -ancestor $base -merge $output | cat

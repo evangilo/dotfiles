@@ -7,3 +7,5 @@ else
   source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=$PATH:$PYENV_ROOT/bin

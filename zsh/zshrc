@@ -9,9 +9,14 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+source ~/.aliases
+source ~/.zsh_profile
+
+[ -e "~/.private_profile" ] && source ~/.private_profile
+
 plugins=(fabric git mercurial)
+eval "$(pyenv init -)"
 eval "$(direnv hook zsh)"
-eval "$(pyenv virtualenv-init -)"
 
 source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
 source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -21,18 +26,6 @@ ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
-
-if [ -e ".aliases" ]; then
- source .aliases
-fi
-
-if [ -e ".zsh_profile" ]; then
-  source .zsh_profile
-fi
-
-if [ -e ".private_profile" ]; then
-  source .private_profile
-fi
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh

@@ -105,6 +105,7 @@ function create_links {
   ln -sf $DOTFILES/zsh/aliases ~/.aliases
   ln -sf $DOTFILES/zsh/zsh_profile ~/.zsh_profile
   ln -sf $DOTFILES/tmux/tmux.conf ~/.tmux.conf
+  ln -sf $DOTFILES/colorssh.sh ~/.colorssh.sh
 }
 
 pull_repo

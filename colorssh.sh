@@ -1,12 +1,12 @@
 function colorssh() {
   production_server=1
-  colorssh_servers="$HOME/.colorssh_servers"
+  dev_servers="$HOME/.dev_servers"
 
   while IFS= read -r server; do
     if [[ $@ =~ $server ]] ; then
       production_server=0
     fi
-  done < $colorssh_servers
+  done < $dev_servers
 
   if [ $production_server == 1 ]; then
     echo -e "\033]50;SetProfile=production\a";

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function install {
+  rm -rf ~/.asdf
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
   cd ~/.asdf
   git switch -c "$(git describe --abbrev=0 --tags)"

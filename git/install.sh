@@ -1,7 +1,9 @@
 #!/bin/bash
 
 function install {
-  brew install git
+  if ! which git &> /dev/null; then
+    brew install git
+  fi
 }
 
 function setup {

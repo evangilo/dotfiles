@@ -3,6 +3,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set ruler
@@ -37,3 +38,5 @@ autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 autocmd Filetype yml setlocal sts=2 sw=2 expandtab
+
+nnoremap <C-p> :Files<Cr>

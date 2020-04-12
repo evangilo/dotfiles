@@ -1,23 +1,9 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mhinz/vim-signify'
-Plugin 'zenorocha/dracula-theme'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'nvie/vim-flake8'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'docunext/closetag.vim'
-
-call vundle#end()
+call plug#begin('~/.vim/plugged')
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()
 
 set ruler
 set showcmd
@@ -51,20 +37,3 @@ autocmd Filetype json setlocal sts=4 sw=4 expandtab
 autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 autocmd Filetype yml setlocal sts=2 sw=2 expandtab
-
-" Custom key bindings
-nnoremap <C-W>M <C-W>\| <C-W>_  " maximize buffer
-nnoremap <C-W>m <C-W>=  " minimize buffer
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules\|DS_Store\|git',
-  \ 'file': '\v\.(pyc|lock|orig|npm)$'
-  \ }
-
-let g:airline_powerline_fonts = 1
-let g:airline_exclude_preview=1
-
-let g:better_whitespace_enabled=1
-let g:strip_whitespace_on_save=1
-
-let g:closetag_html_style=1

@@ -3,7 +3,7 @@
 DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd )"
 
 function install {
-  brew install zsh
+  bash $DIR/../pkg_install.sh zsh
 }
 
 function setup {

@@ -3,7 +3,7 @@
 DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd )"
 
 function install {
-  brew install fzf ripgrep ncdu
+  bash $DIR/../pkg_install.sh fzf ripgrep ncdu
 }
 
 function setup {

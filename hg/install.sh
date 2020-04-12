@@ -3,9 +3,7 @@
 DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd )"
 
 function install {
-  if ! which git &> /dev/null; then
-    brew install mercurial
-  fi
+  bash $DIR/../pkg_install.sh mercurial
 }
 
 function setup {

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd )"
+
 function install {
   vim_source=$(mktemp -d)
   git clone https://github.com/vim/vim $vim_source
@@ -32,7 +34,7 @@ function install {
 }
 
 function setup {
-  ln -sf $DOTFILES/vim/vimrc ~/.vimrc
+  ln -sf $DIR/vimrc ~/.vimrc
 }
 
 install

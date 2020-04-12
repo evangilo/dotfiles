@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DIR="$(cd "$(dirname "$0")" >/dev/null 2>&1 && pwd )"
+
 function install {
   if ! which git &> /dev/null; then
     brew install git
@@ -7,8 +9,8 @@ function install {
 }
 
 function setup {
-  ln -sf $DOTFILES/git/gitconfig ~/.gitconfig
-  ln -sf $DOTFILES/git/gitignore ~/.gitignore
+  ln -sf $DIR/gitconfig ~/.gitconfig
+  ln -sf $DIR/gitignore ~/.gitignore
 }
 
 install

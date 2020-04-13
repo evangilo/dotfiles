@@ -18,3 +18,4 @@ dist
 build
 
 .envrc
+.tool-versions

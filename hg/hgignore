@@ -21,3 +21,4 @@ build
 syntax: regexp
 
 .tool-versions
+test_psql.ini

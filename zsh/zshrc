@@ -8,6 +8,8 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="false"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+plugins=(branch)
+
 source ~/.aliases
 source ~/.zsh_profile
 
@@ -15,8 +17,4 @@ source ~/.zsh_profile
 
 source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
 
-ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
-ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
-ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
-PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(branch_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'

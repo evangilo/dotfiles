@@ -16,6 +16,9 @@ function setup {
   asdf plugin-add python
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
   bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+  asdf install nodejs latest
+  asdf install python lastest
 }
 
 install

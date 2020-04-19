@@ -4,6 +4,13 @@ filetype off
 call plug#begin('~/.vim/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+  Plug 'mattn/emmet-vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
+  Plug 'dense-analysis/ale'
+  Plug 'skywind3000/asyncrun.vim'
+  Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 set ruler
@@ -40,3 +47,12 @@ autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 autocmd Filetype yml setlocal sts=2 sw=2 expandtab
 
 nnoremap <C-p> :Files<Cr>
+
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
+autocmd BufWritePost *.js AsyncRun -post=checktime eslint --fix
+autocmd BufWritePost *.js PrettierAsync

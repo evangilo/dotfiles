@@ -8,13 +8,9 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="false"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(branch)
-
 source ~/.aliases
 source ~/.zsh_profile
+source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
 
 [ -e "~/.private_profile" ] && source ~/.private_profile
 
-source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
-
-PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(branch_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'

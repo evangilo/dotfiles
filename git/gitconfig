@@ -15,11 +15,20 @@
     df = diff --word-diff
     lg = log --graph --decorate --pretty=oneline --abbrev-commit
     st = status
+    out = !git log origin/$1..HEAD 
+    #out = show --pretty=fuller
 
 [branch]
     autosetuprebase = always
 
 [push]
     default = upstream
-[diff]
+
+[merge]
 	tool = opendiff
+
+[difftool "opendiff"]
+	cmd = opendiff
+
+[mergetool "opendiff"]
+	trustExitCode = true

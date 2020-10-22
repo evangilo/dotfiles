@@ -46,7 +46,8 @@ autocmd Filetype go setlocal sts=2 sw=2 expandtab
 autocmd Filetype vue setlocal sts=2 sw=2 expandtab
 autocmd Filetype yml setlocal sts=2 sw=2 expandtab
 
-nnoremap <C-p> :Files<Cr>
+nnoremap <S-p> :GF?<Cr>
+nnoremap <C-p> :GF<Cr>
 
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {

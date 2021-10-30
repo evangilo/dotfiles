@@ -8,6 +8,10 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="false"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+plugins=(
+  git
+  asdf
+)
 
 source ~/.aliases
 source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh

@@ -8,19 +8,9 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="false"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+
 source ~/.aliases
-source ~/.zsh_profile
 source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
-
 [ -e "~/.private_profile" ] && source ~/.private_profile
-eval "$(pyenv init -)"
+
 eval "$(direnv hook zsh)"
-
-setopt PROMPT_SUBST
-
-show_virtual_env() {
-  if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
-    echo "($(basename $VIRTUAL_ENV)) "
-  fi
-}
-PS1='$(show_virtual_env)'$PS1

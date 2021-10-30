@@ -32,3 +32,6 @@
 
 [mergetool "opendiff"]
 	trustExitCode = true
+
+[includeIf "gitdir:~/src/"]
+  path = ~/src/.gitconfig_override

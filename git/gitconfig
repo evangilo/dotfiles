@@ -25,13 +25,16 @@
     default = upstream
 
 [merge]
-	tool = opendiff
+	tool = meld
 
-[difftool "opendiff"]
-	cmd = opendiff
+[difftool "meld"]
+	cmd = meld
 
-[mergetool "opendiff"]
+[mergetool "meld"]
 	trustExitCode = true
 
 [includeIf "gitdir:~/src/"]
-  path = ~/src/.gitconfig_override
+  path = ~/source/.gitconfig_override
+  path = ~/projects/.gitconfig_override
+[init]
+	defaultBranch = main

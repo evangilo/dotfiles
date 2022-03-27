@@ -38,3 +38,5 @@
   path = ~/projects/.gitconfig_override
 [init]
 	defaultBranch = main
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs

@@ -18,3 +18,7 @@ source $ZSH_PLUGINS/oh-my-zsh/oh-my-zsh.sh
 [ -e "~/.private_profile" ] && source ~/.private_profile
 
 eval "$(direnv hook zsh)"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux
+fi

@@ -19,3 +19,5 @@ build
 
 .envrc
 .tool-versions
+.git-blame-ignore-revs
+
